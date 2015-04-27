@@ -44,3 +44,31 @@ In [33]: strings = [x.lower() for x in strings]
 
 In [34]: strings
 Out[34]: ['some string', 'art', 'music', 'artificial intelligence']
+
+----
+
+fw_chem = open('chemicals.txt')
+dic = {}
+
+for line in fw_chem:
+    (key, value) = line.split(': ')
+    dic[key] = value.strip('\n')
+
+print(dic)
+print("\n\n")
+
+
+from redditdata import *
+
+data_str = ""
+
+for item in data:
+    data_str += "Post #" + str(data.index(item)) + "\n"
+    data_str += "\t" + item["title"] + "\n"
+    data_str += "\t\t" + item["sub"] + "(" + str(item['comments']) + ")" + "\n"
+
+print data_str
+
+fw_data = open('reddit.txt', "w+")
+fw_data.write(data_str)
+fw_data.close()
