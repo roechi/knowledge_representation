@@ -8,9 +8,9 @@ runs = np.array(range(100))
 
 print "\n+++TrivialVacuumEnvironment+++\n"
 
-reflex_vacuum_agent = agents.ReflexVacuumAgent()
 
 for key, value in enumerate(runs):
+    reflex_vacuum_agent = agents.ReflexVacuumAgent()
     vacuum_environment = agents.TrivialVacuumEnvironment()
     vacuum_environment.add_thing(reflex_vacuum_agent)
     vacuum_environment.run(10)
@@ -20,9 +20,8 @@ print "\nReflexVacuumAgent:\n"
 print runs
 print("\n\nAverage: " + str(runs.mean()))
 
-model_vacuum_agent = agents.ModelBasedVacuumAgent()
-
 for key, value in enumerate(runs):
+    model_vacuum_agent = agents.ModelBasedVacuumAgent()
     vacuum_environment = agents.TrivialVacuumEnvironment()
     vacuum_environment.add_thing(model_vacuum_agent)
     vacuum_environment.run(10)
