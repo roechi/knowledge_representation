@@ -18,7 +18,7 @@ for key, value in enumerate(runs):
 
 print "\nReflexVacuumAgent:\n"
 print runs
-print("\n\nAverage: " + str(runs.sum() / len(runs)))
+print("\n\nAverage: " + str(runs.mean()))
 
 model_vacuum_agent = agents.ModelBasedVacuumAgent()
 
