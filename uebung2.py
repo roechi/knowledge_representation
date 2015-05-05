@@ -1,4 +1,4 @@
-#Loesung fuer 2 a.)
+#Loesung fuer 2 a.) fertig
 
 import numpy as np
 
