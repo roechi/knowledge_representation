@@ -124,9 +124,8 @@ def depthFirstSearch(problem):
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
-    
-    
+    #util.raiseNotDefined()
+    return treeSearch(problem, util.Stack())
 
 
 def breadthFirstSearch(problem):
