@@ -20,7 +20,6 @@ def graphSearch(problem, fringe):
                 solution.append(current.action)
                 current = current.parent
             solution.reverse()
-            print solution
             return solution
         else:
             if (not closed.__contains__(node.state)):

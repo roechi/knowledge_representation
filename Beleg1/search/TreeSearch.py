@@ -18,7 +18,6 @@ def treeSearch(problem, fringe):
                 solution.append(current.action)
                 current = current.parent
             solution.reverse()
-            print solution
             return solution
         else:
             for n in expand(node, problem):
