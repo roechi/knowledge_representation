@@ -20,18 +20,6 @@ def treeSearch(problem, fringe):
             solution.reverse()
             return solution
         else:
-            for n in expand(node, problem):
+            for n in Node.expand(node, problem):
                 fringe.push(n)
     return []
-
-def expand(node, problem):
-    successors = []
-    for suc in problem.getSuccessors(node.state):
-        s = Node.Node()
-        s.setParent(node)
-        s.setState(suc[0])
-        s.setAction(suc[1])
-        s.setPathCost(node.pathcost + suc[2])
-        s.setDepth(node.depth + 1)
-        successors.append(s)
-    return successors
