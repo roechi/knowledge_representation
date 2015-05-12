@@ -4,12 +4,8 @@ def graphSearch(problem, fringe):
     solution = []
     closed = []
     root = Node.Node()
-    root.setParent(None)
-    root.setAction(None)
-    root.setState(problem.getStartState())
-    root.setPathCost(0)
-    root.setDepth(0)
-
+    root.state = problem.getStartState()
+    
     fringe.push(root)
     while (not fringe.isEmpty()):
         node = fringe.pop()
