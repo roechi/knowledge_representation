@@ -1,6 +1,7 @@
 import Node
 
 def treeSearch(problem, fringe):
+    solution = []
     root = Node.Node()
     root.state = problem.getStartState()
     
@@ -9,7 +10,6 @@ def treeSearch(problem, fringe):
         node = fringe.pop()
         if problem.isGoalState(node.state):
             current = node
-            solution = []
             while (not(current.parent is None)):
                 solution.append(current.action)
                 current = current.parent

@@ -116,8 +116,9 @@ def nullHeuristic(state, problem=None):
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
-
+    #util.raiseNotDefined()
+    import aStarSearch
+    return aStarSearch.aStarSearch(problem, util.PriorityQueue(), heuristic)
 
 # Abbreviations
 bfs = breadthFirstSearch
