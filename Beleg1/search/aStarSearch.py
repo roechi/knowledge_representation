@@ -1,6 +1,6 @@
 import Node    
 
-def aStarSearch(problem, fringe, heuristic=NullHeuristic):
+def aStarSearch(problem, fringe, heuristic):
     solution = []
     closed = []
     root = Node.Node()
@@ -21,5 +21,5 @@ def aStarSearch(problem, fringe, heuristic=NullHeuristic):
             if (not closed.__contains__(node.state)):
                 closed.append(node.state)
                 for n in Node.expand(node, problem):
-                    fringe.push(n, heuristic(n.state, problem))
+                    fringe.push(n, n.pathcost + heuristic(n.state, problem))
     return []
